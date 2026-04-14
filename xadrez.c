@@ -2,32 +2,42 @@
 
 int main() {
 
-    // ===============================
-    // Movimento do Cavalo (nível aventureiro)
-    // ===============================
+    // ============================
+    // TORRE - usando FOR
+    // Move 5 casas para a direita
+    // ============================
+    int casasTorre = 5;
 
-    // Definindo quantas casas o cavalo irá se mover
-    int movimentosBaixo = 2;
-    int movimentosEsquerda = 1;
-
-    // Contador para o loop while
-    int contador = 0;
-
-    // Linha em branco para separar dos movimentos anteriores
-    printf("\n");
-
-    // Loop externo (FOR) -> movimento vertical (para baixo)
-    // O cavalo anda 2 casas para baixo
-    for (int i = 0; i < movimentosBaixo; i++) {
-        printf("Baixo\n");
+    printf("Movimento da Torre:\n");
+    for (int i = 0; i < casasTorre; i++) {
+        printf("Direita\n");
     }
 
-    // Loop interno (WHILE) -> movimento horizontal (para a esquerda)
-    // O cavalo anda 1 casa para a esquerda
-    while (contador < movimentosEsquerda) {
+    // ============================
+    // BISPO - usando WHILE
+    // Move 5 casas na diagonal (cima + direita)
+    // ============================
+    int casasBispo = 5;
+    int contadorBispo = 0;
+
+    printf("\nMovimento do Bispo:\n");
+    while (contadorBispo < casasBispo) {
+        printf("Cima Direita\n");
+        contadorBispo++;
+    }
+
+    // ============================
+    // RAINHA - usando DO-WHILE
+    // Move 8 casas para a esquerda
+    // ============================
+    int casasRainha = 8;
+    int contadorRainha = 0;
+
+    printf("\nMovimento da Rainha:\n");
+    do {
         printf("Esquerda\n");
-        contador++;
-    }
+        contadorRainha++;
+    } while (contadorRainha < casasRainha);
 
     return 0;
 }
